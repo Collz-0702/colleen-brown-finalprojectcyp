@@ -4,10 +4,10 @@ describe('Logining onto the platform', () => {
     beforeEach(() => {
         cy.visit('/')
     })
-    // remove skip button before first test case below to run. Emails cannot be repeated for signing up and faker doesnt work for signing up
-    it.skip('should signup with a valid credentials', () => {
+    // change email in this first test if running more than once.(A number can be removed) Emails cannot be repeated for registering and faker doesnt work for signing up
+    it('should signup with a valid credentials', () => {
         // user goes to home page, then sign up page then enteres credentials
-        Authentication.signUp('colleen9902@gmail.com', 'QUALITYcamp22!')
+        Authentication.signUp('colleen990682@gmail.com', 'QUALITYcamp22!')
         // checks user is signed in and sent to the products page
         cy.get(Authentication.productList).should('be.visible')
         cy.url().should('contain', 'products')
