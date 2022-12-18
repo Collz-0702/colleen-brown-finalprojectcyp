@@ -27,8 +27,6 @@ describe('Sort and Filter', () => {
         ProductsData.products.sort((a, b) => b.price - a.price)
         cy.get(Sort.itemPrice).each(($elem, index) => {
             expect($elem.text()).equal(`${ProductsData.products[index].price}`)
-            // cy.get(Sort.itemPrice).each(($elem, index) => {
-            //     expect($elem.text()).equal(ProductsData.products[index].price)
         })
     })
     it('should filter products by hat category', () => {
