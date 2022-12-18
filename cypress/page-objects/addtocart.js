@@ -57,7 +57,7 @@ class addToCart {
     increaseCartItem() {
         cy.get(this.qualityFittedHatItem).scrollIntoView()
         cy.wait(1500)
-        cy.get(this.increaseValue).click(2)
+        cy.get(this.increaseValue).dblclick()
         cy.get(this.qualityFittedHatItem).click()
 
     }
